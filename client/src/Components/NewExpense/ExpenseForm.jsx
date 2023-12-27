@@ -7,8 +7,21 @@ const ExpenseForm = () => {
     const [amount, setAmount] = useState("");
     const [date, setDate] = useState("");
     
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        const expenseData = {
+          title: title,
+          amount: amount,
+          date: date,
+        };
+        console.log(expenseData);
+        setTitle("");
+        setAmount("");
+        setDate("");
+      };
   return (
-    <form>
+    <form  onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
