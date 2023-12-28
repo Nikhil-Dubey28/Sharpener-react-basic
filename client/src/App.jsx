@@ -1,5 +1,6 @@
-import ExpenseItems from "./Components/Expenses/ExpenseItems"
+import ExpenseItems from "./Components/Expenses/ExpenseItem"
 import NewExpense from "./Components/NewExpense/NewExpense"
+import Expenses from "./Components/Expenses/Expenses"
 
 function App() {
   let expenses = [
@@ -25,12 +26,7 @@ function App() {
     <>
     <h2>Lets get started</h2>
       <NewExpense />
-   { expenses.map((expense) => {
-      return (
-
-        <ExpenseItems expense={expense} />
-      )
-    })}
+      <Expenses items={expenses} />
     </>
   )
 }
